@@ -14,7 +14,6 @@
     </properties>
 
     <dependencies>
-        <!-- JSON Library for parsing JSON -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
