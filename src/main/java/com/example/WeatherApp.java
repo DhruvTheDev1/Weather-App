@@ -1,21 +1,30 @@
 package com.example;
 
+import java.util.Scanner;
+
 import org.json.JSONObject;
 
 public class WeatherApp {
   public static void main(String[] args) {
 
-    // test
-    String city = "London";
+    Scanner scanner = new Scanner(System.in);
 
-    GetLocationData location = new GetLocationData();
-    JSONObject London = location.LocationData(city);
+    while (true) {
+      System.out.println("=========================");
+      System.out.print("Enter City (No to Quit): ");
+      String city = scanner.nextLine();
 
-    double latitude = London.getDouble("latitude");
-    double longitude = London.getDouble("longitude");
+      if (city.equalsIgnoreCase("No")) {
+        break;
+      }
 
-    System.out.println(latitude);
-    System.out.println(longitude);
+      JSONObject location = new GetLocationData().LocationData(city);
 
+      double latitude = location.getDouble("latitude");
+      double longitude = location.getDouble("longitude");
+
+      new GetWeatherData().weatherData(latitude, longitude);
+    }
+    scanner.close();
   }
 }

@@ -14,7 +14,8 @@ public class GetLocationData {
 
     try {
       // Geocoding API
-      String urlString = "";
+      String urlString = "https://geocoding-api.open-meteo.com/v1/search?name=" + city
+          + "&count=1&language=en&format=json";
 
       URI uri = new URI(urlString);
       URL url = uri.toURL();
