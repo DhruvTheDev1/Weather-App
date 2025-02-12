@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+
+    <form action="/" method="post">
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter City" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div th:if="${weather}">
+        <h2>Weather Information</h2>
+        <p><strong>City:</strong> <span th:text="${weather.city}"></span></p>
+        <p><strong>Temperature:</strong> <span th:text="${weather.temperature}"></span> °C</p>
+        <p><strong>Humidity:</strong> <span th:text="${weather.humidity}"></span> %</p>
+        <p><strong>Wind Speed:</strong> <span th:text="${weather.windSpeed}"></span> km/h</p>
+    </div>
+</body>
+</html>
