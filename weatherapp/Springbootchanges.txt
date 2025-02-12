@@ -12,9 +12,14 @@ Spring Boot Architecture
 1. Presentation Layer/Controller:
 - Weather Controller
 - Gets city -> /weather?city=London
+- Uses location data to retrieve weather data
 - Thymeleaf for html
 
 2. Service Layer
-- WeatherService
-- Calls Geocoding API/Weather API
+- GetLocationData - extracts location data (longitude/latitude)
+- GetWeatherData - Uses Geocoding API data to retrieve weather information
 - Extracts data and returns to Controller
+
+3. Model Layer
+- location - latitude/longitude objects
+- Weather - weather objects
