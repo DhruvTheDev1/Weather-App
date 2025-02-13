@@ -1,0 +1,25 @@
+Converting console application into spring boot
+
+Console app:
+- GetLocationData.java - Geocoding API to retrieve location data and returns coordinates
+- GetWeatherData.java - Calls weather api using location coordinates
+
+- Prints weather data to console
+
+Spring Boot web-app:
+Spring Boot Architecture
+
+1. Presentation Layer/Controller:
+- Weather Controller
+- Gets city -> /weather?city=London
+- Uses location data to retrieve weather data
+- Thymeleaf for html
+
+2. Service Layer
+- GetLocationData - extracts location data (longitude/latitude)
+- GetWeatherData - Uses Geocoding API data to retrieve weather information
+- Extracts data and returns to Controller
+
+3. Model Layer
+- location - latitude/longitude objects
+- Weather - weather objects
