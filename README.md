@@ -23,20 +23,41 @@ Springboot Architecture:
   
  - Service Layer:
    - Contains the logic of the application
-   - WeatherService.java - Gets coordinates and weather data from the lower-level services and creates a weather object and sends it to the controller layer
-   - GetLocationData.java - Uses Geocoding API to retrieve latitude and longitude.
-   - GetWeatherData.java - Uses the coordinates to retrieve weather information from Open Forecast API.
-   - 
+   - WeatherService.java - Gets coordinates and weather data, creates a weather object and sends it the controller layer
+   - GetLocationData.java - Uses Geocoding API to retrieve latitude and longitude
+   - GetWeatherData.java - Uses the coordinates to retrieve weather information from Open Forecast API
+     
 - Model Layer:
   - WeatherData.java - Defines the structure of the weather data and passed by the controller to the view.
-  - 
+
 - View Layer:
     - Thymeleaf used to present the weather information dynamically.
-     
-Tech Stack:
-- Backend: SpringBoot
-- Frontend: Thymeleaf
-- APIs: Open-Meteo's API (Geocoding API and Weather Forecast API)
+
+Example:
+
+![image](https://github.com/user-attachments/assets/84456895-e0c3-4d36-a2c9-fae92f2ea162)
+
+
+=============================================
+
+
+![image](https://github.com/user-attachments/assets/88d8c3d0-d32e-492c-af11-71357b11daad)
+
+
+=============================================
+
+Further Work:
+- Improve front-end using ReactJS to create a more dynamic and interactive user experience
+- Integrate a weekly forecast rather than just the current weather
+- Improve form validation and error handling to ensure better input handling
+
+Note:
+
+
+![image](https://github.com/user-attachments/assets/310facd7-77a7-401b-8e23-a291833b07fe)
+
+
+
 
 Example:
 
